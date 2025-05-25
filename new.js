@@ -129,3 +129,34 @@ const countVow = str => {
 // for each loop in arrays (method) 
 // here it is a function to execute for each element in the array
 // callback is a function passed as an argument to another function (arr.forEach(call back function))
+
+// callback function 
+
+console.log("one");
+console.log("two");
+
+setTimeout(()=>{
+    console.log("hello");
+}, 4000 ); // timeout
+
+console.log("three");
+console.log("four") // asynchronous 
+
+// call back promises
+
+let promise = new Promise((resolve, reject) => {
+    console.log("I am a promise");
+    reject("some error occurred");
+});
+
+function getData(dataId, getNextData) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data", dataId);
+            if (getNextData) {
+                getNextData();
+            }
+            resolve(`Data ${dataId} retrieved`); // Resolving the promise
+        }, 5000);
+    });
+}
