@@ -49,10 +49,24 @@ if(!str.includes("a")&& !str.includes("A")){
     document.writeln(`${str} does not contain a`)
 }
 
-//Determine if a user is 18 years or older.
+//Determine if a user is 18 years or above older.
 
-
+let num6 = Number(prompt("enter the age:"));
+if(num6 >= 18){
+    document.writeln(`${num6} is older`);
+}
+if(num6 < 18){
+    document.writeln(`${num6} is not older`);
+}
 //Check if a variable isLoggedIn is true.
+
+let isLoggedIn = confirm("Are you logged in? Click OK for Yes, Cancel for No");
+if(isLoggedIn === true){
+    document.writeln(`${isLoggedIn} user is logged in`);
+}
+if(isLoggedIn === false){
+    document.writeln(`${isLoggedIn} user is not logged in`)
+}
 
 //Check if a number is even.
 
@@ -66,11 +80,44 @@ if(num8 % 2 == 0){
 
 //Check if a given year is greater than 2000.
 
+let year = Number(prompt("Enter the year"));
+if(year > 2000){
+    document.writeln(`${year} is greater than 2000`);
+}
+if(year < 2000){
+    document.writeln(`${year} is not greater than 2000`);
+}
+
 //Check if the length of a string is more than 5.
+
+let str2 = prompt("Enter another string:");
+if(str2.length > 5){
+    document.writeln(`${str2} has more than 5 characters`);
+}
+if(str2.length <= 5){
+    document.writeln(`${str2} not more than 5 characters`);
+}
 
 //Check if a temperature is above 30°C.
 
+let temp = Number(prompt("Enter temperature in °C:"));
+
+if (temp > 30) {
+    document.writeln(`${temp}°C is hot`);
+}
+if (temp <= 30) {
+    document.writeln(`${temp}°C is not hot`);
+}
+
 //Check if a user has a premium account.
+
+let isPremium = confirm("Do you have a premium account:");
+if(isPremium){
+    document.writeln(`${isPremium} user has a premium account`);
+}
+if(!isPremium){
+    document.writeln(`${isPremium} user do not have premium account`);
+}
 
 //Check if a score is greater than or equal to 40 (pass mark).
 
