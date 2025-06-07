@@ -53,6 +53,12 @@ else{
 
 //Print "Valid Email" if the email includes "@", else "Invalid Email".
 
+let email = prompt("Enter your e-mail:");
+if(email === "@"){
+    document.writeln(`${email} valid e-mail`);
+}else{
+    document.writeln(`${email} is not valid`);
+}
 
 //If temperature is above 30, print “Hot”, else print “Normal”.
 
@@ -66,10 +72,16 @@ else{
 
 //Check if a user is online, else print “User is offline”.
 
+let user = prompt("Is user offline or not? type 'online' or 'offline':");
+if(userOnline==="online"){
+    document.writeln(`${userOnline} user is online`);
+}else{
+    document.writeln(`${userOnline} user is offline`);
+}
 
 //Check if a light is on, else turn it on.
 
-let lightIsOn = prompt("Is the light on or off? Type 'on' or 'off:");
+let lightIsOn = prompt("Is the light on or off? Type 'on' or 'off':");
 if(lightIsOn === "on"){
     document.writeln(`${lightIsOn} light is on`);
 }
