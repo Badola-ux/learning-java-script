@@ -20,6 +20,13 @@ document.writeln(`factorial of ${num6}=${f}`)
 
 // wap to print sum of number in a range
 
+let start = Number(prompt("Enter the first Number:"));
+let end = Number(prompt("Enter the second number:"));
+let sum1 = 0;
+for(let i = start; i <= end; i++){
+    sum = sum + i;
+}
+
 // wap to check weather it is perfect number or not 
 
 let num4 = Number(prompt("Enter the number:"));
@@ -29,7 +36,7 @@ for(let i = 1; i<= num/2; i++){
         sum = sum + i;
     }
 }
-if(sum == num){
+if(sum == num4){
     document.writeln(`${num4} is a perfect number`);
 }
 else{
