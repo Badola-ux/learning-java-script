@@ -57,6 +57,16 @@ document.write(`${oddCount} count of odd digits`);
 
 // WAP to reverse a number
 
+let num4 = Number(prompt("enter the number:"));
+let rev = 0;
+while(num4 != 0){
+    let r = num % 10;
+    rev = rev * 10 + r;
+    num4 = Math.floor(num4/10);
+}
+document.writeln(`${rev} reverse number`);
+
+
 /* WAP to check whether a number is NEON number or not
 (1,9) */
 
