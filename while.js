@@ -90,11 +90,22 @@ if(sum2===num5){
 // sum of cube of a single digit is equal to the same number 
 
 let num7 = Number(prompt("Enter the number:"));
-let temp = num;
+let temp = num7;
 let count2 = 0;
 while(temp!=0){
     temp = Math.floor(temp/10);
-    count++
+    count2++
+}
+temp = num7;
+while(temp!=0){
+    let digit = temp%10;
+    sum = sum + Math.pow(digit,count2);
+    temp = Math.floor(temp/10);
+}
+if(sum===num7){
+    document.writeln(`${num7} is an armstrong number:`);
+}else{
+    document.writeln(`${num7} is not a armstrong number`);
 }
 
 
