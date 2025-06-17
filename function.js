@@ -66,9 +66,31 @@ function add(){
 }
 function test(){
     let s = add();
-    console.log(`sum = ${s}`); // multiple time will be used for single time use 'add' in place of 's'
+    console.log(`sum = ${s}`); // multiple time will be used for single time or variable use 'add' in place of 's'
 }
 test()
 
 // function without return value with parameter
+
+function add(x,y){
+    let sum = x + y;
+    console.log(`sum = ${sum}`)
+}
+function test(){
+    let a = 7;
+    let b = 10;
+    add(a,b);
+}
+test()
+
 // function with return with parameter 
+
+function add(x,y){
+    return sum
+}
+function test(){
+    let a = 10;
+    let b = 20;
+    console.log(`sum=${add(a,b)}`)
+}
+test()
