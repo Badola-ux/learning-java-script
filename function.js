@@ -86,6 +86,7 @@ test()
 // function with return with parameter 
 
 function add(x,y){
+    let sum = x + y;
     return sum
 }
 function test(){
