@@ -283,3 +283,78 @@ if (isMagicNumber(n)) {
 } else {
     document.writeln(`${n} is not a Magic number`);
 }
+
+// wap to check weather the number is armstrong number or not
+
+/* without return value and without parameter*/
+
+function checkMagicNumber() {
+    let n = Number(prompt("Enter the number:"));
+    let sum = 0;
+    for (let num = n; num != 0; ) {
+        let digit = num % 10;
+        sum = sum + digit;
+        num = parseInt(num / 10);
+    }
+    let reverse = 0;
+    for (let temp = sum; temp != 0; ) {
+        let digit = temp % 10;
+        reverse = reverse * 10 + digit;
+        temp = parseInt(temp / 10);
+    }
+    if (sum * reverse === n) {
+        document.writeln(`${n} is a magical number`);
+    } else {
+        document.writeln(`${n} is not a magical number`);
+    }
+}
+checkMagicNumber();
+
+
+// wap to check weather the number is NEON number or not 
+
+/* with return value value with parameter*/
+
+function neonNumber(num5) {
+    let square = num5 * num5;
+    let sum2 = 0;
+    for (let i = 0; i < 1; i++) {
+        for (let temp = square; temp != 0; ) {
+            let digit = temp % 10;
+            sum2 = sum2 + digit;
+            temp = Math.floor(temp / 10);
+        }
+    }
+    return sum2 === num5;
+}
+let number = Number(prompt("Enter the number:"));
+if (neonNumber(number)) {
+    document.writeln(`${number} is a Neon number`);
+} else {
+    document.writeln(`${number} is not a Neon number`);
+}
+// wap to check weather the number is magical number or not 
+
+/*with return value with parameter*/
+
+function isMagicNumber(n) {
+    let sum5 = 0;
+    for (let temp = n; temp != 0; ) {
+        let r = temp % 10;
+        sum5 = sum5 + r;
+        temp = parseInt(temp / 10);
+    }
+    let reverse = 0;
+    for (let temp = sum5; temp != 0; ) {
+        let r = temp % 10;
+        reverse = reverse * 10 + r;
+        temp = parseInt(temp / 10);
+    }
+    return (sum5 * reverse === n);
+}
+let num = Number(prompt("Enter the number:"));
+if (isMagicNumber(num)) {
+    document.writeln(`${num} is a magical number`);
+} else {
+    document.writeln(`${num} is not a magical number`);
+}
