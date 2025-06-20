@@ -1,8 +1,39 @@
-// to check weather the two numbers are equal or not
+// wap to check weather a number is divisible by both 2 and 3
 
-// to check weather the two person can vote or not
+let num = Number(prompt("Enter the number:"));
+if(num %2 === 0){
+    if(num %3 === 0){
+        document.writeln(`${num} is divisible by both 2 and 3`);
+    }else{
+        document.writeln(`${num} is divisible by 2 but not 3`);
+    }
+}
+else{
+    if(num %3 === 0){
+        document.writeln(`${num} is divisible by 3 but not 2`);
+    }
+    else{
+        document.writeln(`${num} not divisible by both 2 and 3`);
+    } 
+}
 
-// to check weather a number is perfect square or not 
+// wap to check weather it is leap year or not 
+
+let year = Number(prompt("Enter the year:"));
+if(year % 100 == 0){
+    if(year % 400 == 0){
+        document.writeln(`${year} is a leap year`);
+    }else{
+        document.writeln(`${year} is not a leap year`);
+    }
+}
+else{
+    if(year%4 == 0){
+        document.writeln(`${year} is a leap year`);
+    }else{
+        document.writeln(`${year} is not a leap year`);
+    }
+}
 
 //Check if a number is positive. If yes, check if it is even.
 
