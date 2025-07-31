@@ -16,7 +16,7 @@ console.log(`${oddSum} sum of odd elements`);
 // wap to count and print prime number from an array 
 
 let arr1 = [10, 5, 7, 13, 8, 1, 2, 11];
-let count = 0;
+let count1 = 0;
 for(let i = 0; i < arr1.length; i++){
     let num = arr1[i];
     let isPrime = true;
@@ -36,7 +36,7 @@ if(isPrime){
     count++
 }
 }
-console.log(`${count} total prime number`);
+console.log(`${count1} total prime number`);
 
 // wap to find the smallest element from an array without sorting them 
 
@@ -100,3 +100,70 @@ for(let i = 0; i < n; i++){
         console.log(`${min} is the smallest element ${n}th`)
     }
 }
+
+// wap to split an array into two arrays which first elements contains all even elements and second array contains an odd elements 
+
+let arr6 = [1,2,3,4,5,6,7,8,9];
+let even = [];
+let odd = [];
+for(let i = 0; i<arr.length; i++){
+    if(arr[i]%2===0){
+        even.push(arr[i]);
+    }else{
+        odd.push(arr[i]);
+    }
+}
+console.log(`${even} even elements`);
+console.log(`${odd} odd elements`);
+
+//wap to split an array into two arrays in which first element contain all prime elements and second array contains all non prime elements 
+
+let arr7 = [1,2,3,4,5,6,7,8,9,10,11];
+let prime = [];
+let nonPrimeElements = [];
+for(let i = 0; i < arr7.length; i++){
+    let num = arr[i];
+    let isPrime = true;
+
+    if(num<2){
+        isPrime = false;
+    }else{
+        for(let j = 0; j < num; j++){
+            if(num%j===0){
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    if(isPrime){
+        prime.push(num);
+    }else{
+        nonPrimeElements.push(num);
+    }
+}
+console.log(`${prime} prime`);
+console.log(`${nonPrimeElements} nonPrime`);
+
+// wap to count occurrence of every element from array 
+
+let arr8 = [1,2,3,4,5,6,7,8,9,10];
+let result1 = {};
+for(i=0;i<arr8.length;i++){
+    let current = arr8[i];
+
+    if (result1[current] !== undefined) {
+        result1[current] = result1[current] + 1;
+    } else {
+        result1[current] = 1;
+    }
+}
+
+//wap to remove duplicate element from an array 
+
+let arr9 = [1,2,3,4,5,6,7,8,9,10];
+let result = [];
+for(let i = 0; i < arr9.length; i++){
+    if(!result.includes(arr9[i]));
+    result.push(arr9[i]);
+}
+console.log(result);
