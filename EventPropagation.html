@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Propagation Example</title>
+<style>
+    * {
+    margin: 0;
+    }
+    .main {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .child1, .child2, .child3, .child4 {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .child1 { background-color: lightblue; }
+    .child2 { background-color: lightgreen; }
+    .child3 { background-color: lightpink; }
+    .child4 { background-color: lightcoral; }
+</style>
+</head>
+<body>
+<div class="main">
+    <div class="child1">
+    <div class="child2">
+        <div class="child3">
+        <div class="child4"></div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    var main = document.querySelector(".main");
+    var child1 = document.querySelector(".child1");
+    var child2 = document.querySelector(".child2");
+    var child3 = document.querySelector(".child3");
+    var child4 = document.querySelector(".child4");
+
+    // true → capturing phase
+    main.addEventListener("click", () => alert("Main DIV (capturing)"), true);
+    child1.addEventListener("click", () => alert("Child1 DIV (capturing)"), true);
+    child2.addEventListener("click", () => alert("Child2 DIV (capturing)"), true);
+    child3.addEventListener("click", () => alert("Child3 DIV (capturing)"), true);
+    child4.addEventListener("click", () => alert("Child4 DIV (capturing)"), true);
+</script>
+</body>
+</html>
