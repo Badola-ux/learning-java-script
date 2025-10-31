@@ -31,3 +31,19 @@ console.log(e.toLocaleString());
 
 var f = new Date("2025/08/12 15:30:33");
 console.log(f.toLocaleString());
+
+// to get date and time 
+
+var g = new Date();
+console.log(g.getFullYear());
+console.log(g.getMonth());
+console.log(g.getDate());
+console.log(g.getHours());
+console.log(g.getMinutes());
+console.log(g.getSeconds());
+console.log(g.getMilliseconds());
+console.log(g.getUTCDate());
+console.log(g.getTime());
+console.log(g.getTime()); // millisecond since jan 1970
+console.log(g.getDay());  // weak day
+console.log(Date.now());  // millisecond since jan 1970
